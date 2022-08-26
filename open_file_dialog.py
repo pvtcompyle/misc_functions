@@ -28,12 +28,13 @@ def open_file_dialog(
         _flags = win32con.OFN_EXPLORER
     
     try:
-        fname, customfilter, flags=win32gui.GetOpenFileNameW(
+        fname, _customfilter, flags=win32gui.GetOpenFileNameW(
             InitialDir = _initdir,
             Flags = _flags,
             File = _file,
             Title = _title,
             Filter = _filter,
+            CustomFilter = _customfilter,
             FilterIndex = _filterindex
         )
     except Exception as e:
