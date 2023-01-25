@@ -1,21 +1,21 @@
 def open_file_dialog(
-    filter='TEXT\0*.txt\0',
-    customfilter='Other file types\0*.*\0',
-    initdir='',
-    envvar = '', 
-    file="MyFile", DefExt="txt", 
-    title='Select file to open',
-    filterindex=0,
-    multiselect=False 
-):
+        filter='TEXT\0*.txt\0',
+        customfilter='Other file types\0*.*\0',
+        initdir='',
+        envvar = '', 
+        file="MyFile", DefExt="txt", 
+        title='Select file to open',
+        filterindex=0,
+        multiselect=False 
+    ):
     '''
     author: PVTCompyle
     upated: 26-AUG-2022
     DESC: Opens a file dialog box so you can select a file for use in your program. By default, a single filename
     with directory is returned as a string. 
     
-    If multiselect mode is enabled, a list containg the directory name at [0] 
-    and filenames in [1:]. 
+    If multiselect mode is enabled, fname will return a list containg the directory name at [0] 
+    and filenames in [1:].
 
     if envvar is defined, the InitialDir will be set to %ENVVAR%\initdir, so set initdir as needed.
     '''
